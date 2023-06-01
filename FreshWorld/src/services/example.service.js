@@ -11,6 +11,9 @@ const exampleService = {
   // me(){
   //   return requests.get(`/auth/me`);
   // }
+  getAll(){
+    return requests.get("/categories")
+  }
 };
 
 export default exampleService;

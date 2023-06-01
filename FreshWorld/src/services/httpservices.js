@@ -13,16 +13,16 @@ const instance = axios.create({
 })
 
 // Add a request interceptor
-instance.interceptors.request.use(function (config) {
-//   const storedToken = window.localStorage.getItem(authConfig.storageTokenKeyName)!
+// instance.interceptors.request.use(function (config) {
+// //   const storedToken = window.localStorage.getItem(authConfig.storageTokenKeyName)!
 
-  return {
-    ...config,
-    headers: {
-      authorization: storedToken ? `Bearer ${storedToken}` : null
-    }
-  }
-})
+//   return {
+//     ...config,
+//     headers: {
+//       authorization: storedToken ? `Bearer ${storedToken}` : null
+//     }
+//   }
+// })
 
 // const responseBody = (response: any) => response.data;
 

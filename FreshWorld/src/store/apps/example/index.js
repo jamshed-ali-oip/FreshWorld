@@ -11,9 +11,6 @@ import { exampleService } from '../../../services'
 
 
 
-
-
-
 export const QueryAction = createAsyncThunk(
     'example/query',
     async (query, { getState, dispatch }) => {
@@ -25,6 +22,7 @@ export const QueryAction = createAsyncThunk(
 export const fetchOneAction = createAsyncThunk(
     'example/fetchOne',
     async (id) => {
+        console.log("response",response)
         const response = await exampleService.getById(id);
         return response.data
     }
@@ -34,7 +32,9 @@ export const fetchAllAction = createAsyncThunk(
     'example/fetchAll',
     async (params, { getState, dispatch }) => {
         const { query } = params;
-        const response = await exampleService.getAll({ query });
+     console.log("hiiii")
+        const response = await exampleService.getAll(); // { query }
+        console.log("ghanta",response)
         return response.data
     }
 )
